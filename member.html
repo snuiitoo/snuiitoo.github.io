@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member</title>
+    <link rel="stylesheet" href="./css/second_style.css">
+    <!-- <script type="text/javascript" src="./js/script.js"></script>  -->
+</head>
+<body>
+    <div id="header" class="main_hd">
+        <a href="index.html" title="main">
+            <img src="./images/snuiitoo - MarkMaker Logo.png" alt="메인로고">
+        </a>
+    </div>
+
+    <!-- sideNav Header -->
+    <nav id="sideNav">
+        <ul class="gnb_list">
+            <a href="member.html">SIGNUP</a>
+            <a href="aboutme.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </ul>
+    </nav>
+
+        <!-- <form onsubmit="return checkAll()" method="post" action="javascript:alert('가입완료');" class="memberForm" > -->
+            <form name="guestbookFrm" action="javascript:saveGuestbook();" class="memberForm">
+        <div class="textForm">
+            <input name="userId" id="userId" type="text" class="id" placeholder="아이디">
+        </div>
+    <div class="textForm">
+        <input name="userPassword" id="pwd" type="password" class="pw" placeholder="비밀번호">
+    </div>
+    <div class="textForm">
+        <input name="checkPassword" id="pwdCheck" type="password" class="checkPw" placeholder="비밀번호 확인">
+    </div>
+    <div class="textForm">
+        <input name="userName" id="userName" type="text" class="userName" placeholder="이름">
+    </div>
+    <button type="submit" class="j_btn" onclick="javascript:j_btn()">J O I N</button>
+    
+    <a href="./test.html">
+        <button type="button" class="btn">M E M B E R</button>
+    </a>
+</form>
+
+<script>
+    
+    document.guestbookFrm.addEventListener('submit', (e) => {
+    const usernameVal = userName.value;
+    const useridVal = userId.value;
+    
+    if (!useridVal) {
+        alert("아이디를 입력해주세요.");
+        e.preventDefault();
+        return;
+    }
+    if (!usernameVal) {
+      alert("이름을 작성해주세요.");
+      e.preventDefault();
+      return;
+  } 
+  else {
+      alert('회원 가입 성공!')
+  }
+
+  });
+
+  const saveGuestbook = () => {
+    console.log('회원목록');
+    const usernameVal = userName.value;
+    const useridVal = userId.value;
+
+    // 방명록객체 생성
+    const guestbook = new Guestbook(usernameVal, useridVal);
+    // console.log(guestbook);
+    
+    // guestbooks배열 관리
+    const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
+    // console.log(memberList);
+    memberList.push(guestbook);
+    
+    localStorage.setItem('memberList', JSON.stringify(memberList));
+    
+    // 폼초기화
+    document.guestbookFrm.reset();
+
+    // 화면 render
+    renderGuestbook(memberList);
+
+  }
+
+  class Guestbook {
+            constructor(username, userid, datetime = Date.now()) {
+                this.username = username;
+                this.userid = userid;
+                this.datetime = datetime;
+            }
+        }
+
+        const renderGuestbook = (memberList = JSON.parse(localStorage.getItem('memberList'))) => {
+            // memberList = memberList || JSON.parse(localStorage.getItem('memberList'));
+            const tbody = document.querySelector("#tb-guestbook tbody");
+            tbody.innerHTML = ""; // 초기화
+
+            memberList.forEach((guestbook, index) => {
+                const { username, userid, datetime } = guestbook;
+                const html = `<tr>
+        <td>${index + 1}</td>  
+        <td>${username}</td>  
+        <td>${userid}</td>  
+        <td>${formatDatetime(datetime)}</td>  
+      </tr>`;
+                tbody.innerHTML += html;
+            });
+
+        }
+
+        const formatDatetime = (millis) => {
+            const d = new Date(millis);
+
+            // n을 인자로 받아서 숫자 두 자리로 만들기
+            const f = (n) => n < 10 ? "0" + n : n;
+            const MM = f(d.getMonth() + 1);
+            const dd = f(d.getDate());
+            const HH = f(d.getHours());
+            const mm = f(d.getMinutes());
+            return `${MM}/${dd} ${HH}:${mm}`;
+        };
+
+        window.addEventListener('load', () => {
+            renderGuestbook();
+        });
+</script>
+
+</body>
+</html>

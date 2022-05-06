@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aboutme</title>
+    <link rel="stylesheet" href="./css/second_style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="header" class="main_hd">
+        <a href="index.html" title="main">
+            <img src="./images/snuiitoo - MarkMaker Logo.png" alt="메인로고">
+        </a>
+    </div>
+
+    <!-- sideNav Header -->
+    <nav id="sideNav">
+        <ul class="gnb_list">
+            <a href="member.html">SIGNUP</a>
+            <a href="aboutme.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </ul>
+    </nav>
+
+    <div id="slideshow">
+        <div><img src="./images/me.jpg" alt=""></div>
+        <div><img src="./images/go1.jpg" alt=""></div>
+        <div><img src="./images/go2.jpg" alt=""></div>
+        <div><img src="./images/yellow.jpg" alt=""></div>
+    </div>
+
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  2000);
+    </script>
+
+    <div class="introduce">
+        <p id="about">ABOUT</p>
+        <br>
+        <hr width="22%;" margin-left="1px;">
+        <br>
+        <p>안녕하세요!</p>
+        <p>저는 <span class="half">유혜리</span>라고 합니다.</p>
+        <p>제가 사는 곳은 <span class="half">이천</span>인데요, 시골이라 공기도 맑고 좋습니다.</p>
+        <p><span style="text-decoration:line-through;">요즘은 아니지만요 . .</span></p>
+        <p>나이는 <span class="half">24살</span>이고 <span class="half">사진</span> 찍는 것과 <span class="half">전시회</span> 보러 다니는 것을 좋아합니다.</p>
+        <p><span class="half">좌측</span>에 보이는 <span class="half">사진</span>이 제가 가장 최근에 갔던 <span class="half">전시회 사진</span>이에요!</p>
+        <p>- photo by yhr.. -</p>
+        <p>지금은 <span class="half">개발자</span>를 꿈꾸며 공부하고 있는데,</p>
+        <p>정말 쉽지않네요 TT</p>
+        <p>최근 <span style="text-decoration:line-through;">코로나</span>에 걸리고 멍 때리는 시간이 길어졌어요.</p>
+        <p>다들 코로나 조심하시고 건강 챙기면서 공부하시길 바랍니다 . .</p>
+        <p><span class="half">화이팅!</span></p>
+    </div> 
+   
+    <!-- footer -->
+    <div id="footer">
+        <p class="copyright">copyright © 2022 All rights reserved by snuiitoo</p>
+        <ul class="sns">
+            <li>
+                <a href="https://www.instagram.com" target="_blank"><img alt="인스타그램" src="./images/sns_instagram_b.png"></a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com" target="_blank"><img alt="트위터" src="./images/sns_twitter_b.png"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank"><img alt="페이스북" src="./images/sns_facebook_b.png"></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank"><img alt="유튜브" src="./images/sns_youtube_b.png"></a>
+            </li>          
+        </ul>
+    </div>
+</body>
+</html>

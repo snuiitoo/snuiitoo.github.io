@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+    <link rel="stylesheet" href="./css/second_style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="./js/script.js"></script> 
+</head>
+<body>
+    <div id="header" class="main_hd">
+        <a href="index.html" title="main">
+            <img src="./images/snuiitoo - MarkMaker Logo.png" alt="메인로고">
+        </a>
+    </div>
+    
+    <!-- sideNav Header -->
+    <nav id="sideNav">
+        <ul class="gnb_list">
+            <a href="member.html">SIGNUP</a>
+            <a href="aboutme.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </ul>
+    </nav>
+    
+    <div class="film">
+        <img src="./images/pngwing.com.png" alt="">
+    </div>
+    
+    <div class="page" style="background-image: url(./images/pngwing.com.png);">
+        <div class="slider">
+            <a href="#shu">
+                <div class="slide"><img src="./images/aapple.jpg" class="_slide" alt=""></div>
+            </a>
+            <a href="#swan">
+                <div class="slide"><img src="./images/스완.jpg" class="_slide" alt=""></div>
+            </a>
+            <a href="#plash">
+                <div class="slide"><img src="./images/위플래쉬.jpg" class="_slide" alt=""></div>
+            </a>
+            <a class="prev" onclick="button_click(-1)">&#10094</a>
+            <a class="next" onclick="button_click(1)">&#10095</a>        
+        </div>
+    </div>
+ <br><br><br><br>
+    
+    <div class="subPage">
+        <div id="fiMv" class="mv">
+            <p class="_title" id="shu">#릴리슈슈의 모든 것</p>
+            <iframe class="play" width="585" height="285" src="https://www.youtube.com/embed/Kwlh-z2R8QE?start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="ex">"내 고통은 에테르로 치유된다."</p>
+        </div>
+    </div>
+    
+    
+    <div class="subPage">
+        <div id="seMv" class="mv">
+            <p class="_title" id="swan">#블랙스완</p>
+            <iframe class="play" width="580" height="295" src="https://www.youtube.com/embed/5jaI1XOB-bs?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="ex">"The only person standing in your way is you"
+            </p>
+        </div>
+    </div>
+
+    <div class="subPage">
+        <div id="thMv" class="mv">
+            <p class="_title" id="plash">#위플래쉬</p>
+            <iframe class="play" width="580" height="295" src="https://www.youtube.com/embed/ZZY-Ytrw2co?start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="ex">"There are no two words in the English language more harmful than good job"
+                
+            </p>
+        </div>
+    </div>
+
+
+
+
+<!-- footer -->
+<div id="footer">
+    <p class="copyright">copyright © 2022 All rights reserved by snuiitoo</p>
+    <ul class="sns">
+        <li>
+            <a href="https://www.instagram.com" target="_blank"><img alt="인스타그램" src="./images/sns_instagram_b.png"></a>
+        </li>
+        <li>
+            <a href="https://www.twitter.com" target="_blank"><img alt="트위터" src="./images/sns_twitter_b.png"></a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com" target="_blank"><img alt="페이스북" src="./images/sns_facebook_b.png"></a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com" target="_blank"><img alt="유튜브" src="./images/sns_youtube_b.png"></a>
+        </li>          
+    </ul>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roadmap</title>
+    <link rel="stylesheet" href="./css/second_style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>   
+    <script type="text/javascript" src="./js/script.js"></script> 
+</head>
+<body>
+    <div id="header" class="main_hd">
+        <a href="index.html" title="main">
+            <img src="./images/snuiitoo - MarkMaker Logo.png" alt="메인로고">
+        </a>
+    </div>
+
+    <!-- sideNav Header -->
+    <nav id="sideNav">
+        <ul class="gnb_list">
+            <a href="member.html">SIGNUP</a>
+            <a href="aboutme.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </ul>
+    </nav>
+
+    <div id="roa1">
+        <img src="./images/toppng.com-at-the-movies-will-smith-meme-tada-412x641.png" alt="">
+    </div>
+
+    <div id="roa2">
+        <img src="./images/—Pngtree—paper notes_1703834.png" alt="">
+    </div>
+
+    <div class="wrapper">
+        <div class="menu"><p>2022</p></div>
+        <p class="content">java, css, html, javascript 등을 통해 기본기를 견고히 다질 것</p>
+        <div class="menu"><p>2027</p></div>
+        <p class="content">새로 나온 언어라던지 최신 기술을 익히며 성장한 개발자가 될 것</p>
+        <div class="menu"><p>2032</p></div>
+        <p class="content">배웠던 언어와 새 기술을 접목시켜 자유롭게 활용하는 개발자가 될 것</p>
+    </div>
+
+    <script>
+    $('.menu').hover((e)=>{
+        $(e.target)
+      .next()
+      .slideDown('.content')
+    //   .slideToggle()
+    //   .siblings('.content')
+})
+    </script>
+   
+    <!-- footer -->
+    <div id="footer">
+        <p class="copyright">copyright © 2022 All rights reserved by snuiitoo</p>
+        <ul class="sns">
+            <li>
+                <a href="https://www.instagram.com" target="_blank"><img alt="인스타그램" src="./images/sns_instagram_b.png"></a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com" target="_blank"><img alt="트위터" src="./images/sns_twitter_b.png"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank"><img alt="페이스북" src="./images/sns_facebook_b.png"></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank"><img alt="유튜브" src="./images/sns_youtube_b.png"></a>
+            </li>          
+        </ul>
+    </div>
+</body>
+</html>

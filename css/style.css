@@ -1,0 +1,226 @@
+html, body{
+    width: 100%; 
+    height: 100%;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+/* snuiitoo 로고 */
+.main_hd img {
+    width : 23%
+    
+}
+._main {
+    /* width: 100%;  */
+    /* height: 20%; */
+}
+
+element.style {
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.main_hd {
+    position : absolute;
+    left : 21%;
+    top : 15px;
+}
+
+/* 게시판 리스트 */
+.gnb_list a {
+    text-decoration: none;
+    color:black;
+}
+.gnb_list a:hover {
+    text-decoration: underline;
+}
+
+.gnb_list {
+    list-style: none;
+    float:left;
+    left : 21%;
+    top: 160px;
+    display: row;
+    position: absolute;
+}
+.gnb_list a {
+    line-height: 1.8;
+}
+
+.main_girl > img {
+    width: 450px;
+    height: 610px;
+    position: absolute;
+    top: 47%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+}
+
+.Page {
+    /* background-image: url(/yuhyeri/images/bgc2.png); */
+    width: 100%; 
+    height: 100%;
+}
+
+
+#movie img, #roadmap img {
+    width : 59%;
+    /* height: 20%; */
+    float:right;
+    margin-right: 82px;
+    filter: grayscale(70%);
+    transition: .5s ease-in-out;
+    filter: grayscale(70%); 
+    transition: .5s ease-in-out;
+    filter: grayscale(70%); 
+    transition: .5s ease-in-out;
+  }
+
+#movie img:hover, #roadmap img:hover {
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
+  } 
+#movie img {
+    margin-top: 110px;
+} 
+
+  
+
+/* .subPage, .thPage {
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: 16;
+    transition: opacity .4s ease;
+} */
+
+.subPage {
+    text-align: center;
+}
+
+/* 
+.main_girl {
+    text-align : center;
+    
+} */
+
+
+/* .gnb_list li {
+    width : 40%;
+} */
+
+/* SNS */
+
+
+.sns li {
+    list-style: none;
+    margin-left: 15px;
+} 
+
+.sns img {
+    width:30px;
+}
+
+.sns li:hover {
+    margin-right: 7px;
+    transition: all 0.5s;
+} 
+
+.sns {
+    position: fixed;
+    bottom: 5px;
+    right: 3%;
+    display: flex; 
+    flex-direction: row; 
+}
+
+/* #footer { */
+    /* position: absolute; */
+    /* bottom: 0px; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* min-width: 1200px; */
+    /* z-index: 111; */
+    /* height: 60px; */
+/* }  */
+
+.copyright {
+    position: fixed;
+    bottom: 5px;
+    left: 3%;
+    font-size: 13px;
+    /* font-style : italic; */
+    font-weight: bold; 
+}
+#_btn {
+    border:none;
+    background-color: white;
+    cursor: pointer;  
+}
+
+#_btn img {
+    width:40px;
+}
+
+#move {
+    text-align: center;
+    margin-top:660px;
+}
+
+._txt {
+    color:rgb(86, 85, 85);
+    width: 200px;
+    font-size: 2.5em;
+}
+
+
+#_roadmap {
+    position: absolute;
+    margin-top: 4.5%;
+    left: 10%;
+}
+
+#_movie {
+    position:absolute;
+    top: 120%;
+    left: 10%;
+}
+
+._txt {
+    margin-left: -300px;
+    max-width: 100%;
+}
+
+
+
+/* @keyframes slide {
+    from{
+        left:-100px;
+        opacity: 0;
+    }
+    to{
+        left:10%;
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        left : 10%;
+        opacity: 1;
+    }
+    to {
+        left : -100px;
+        opacity: 0;
+    }
+} */
